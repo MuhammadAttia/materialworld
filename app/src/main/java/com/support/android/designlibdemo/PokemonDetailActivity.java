@@ -23,18 +23,14 @@ import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.graphics.Palette;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
-import java.util.Random;
-
-public class CheeseDetailActivity extends AppCompatActivity {
+public class PokemonDetailActivity extends AppCompatActivity {
 
     public static final String EXTRA_NAME = "cheese_name";
 
@@ -53,6 +49,7 @@ public class CheeseDetailActivity extends AppCompatActivity {
         CollapsingToolbarLayout collapsingToolbar =
                 (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
         collapsingToolbar.setTitle(cheeseName);
+        collapsingToolbar.setExpandedTitleColor(getResources().getColor(R.color.black));
 
         loadBackdrop();
         paletteStuff();
@@ -93,7 +90,7 @@ public class CheeseDetailActivity extends AppCompatActivity {
             }
         };
 
-        Bitmap myBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.cheese_3);
+        Bitmap myBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.charmander);
         if (myBitmap != null && !myBitmap.isRecycled()) {
             Palette.from(myBitmap).generate(paletteListener);
         }
@@ -101,7 +98,7 @@ public class CheeseDetailActivity extends AppCompatActivity {
 
     private void loadBackdrop() {
         final ImageView imageView = (ImageView) findViewById(R.id.backdrop);
-        Glide.with(this).load(Cheeses.getRandomCheeseDrawable()).centerCrop().into(imageView);
+        Glide.with(this).load(Pokemon.getRandomCheeseDrawable()).centerCrop().into(imageView);
     }
 
     @Override

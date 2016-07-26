@@ -21,4 +21,5 @@
     <color name="color_primary_dark">#C2185B</color>
     <color name="color_accent">#FFC107</color>
     <color name="color_accent_white">#FFECB3</color>
+    <color name="black">#000000</color>
 </resources>

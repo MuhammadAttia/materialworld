@@ -17,11 +17,11 @@
 
 <resources>
     <string name="app_name">Material World</string>
-    <string name="cheese_ipsum">Jarlsberg lancashire edam. Dolcelatte hard cheese brie st. agur blue
-      cheese caerphilly bavarian bergkase cheese and biscuits mascarpone. Cheeseburger swiss bavarian
-      bergkase cream cheese fromage frais cheesy feet port-salut airedale. St. agur blue cheese rubber
-      cheese caerphilly cheddar cheesecake cream cheese manchego lancashire. Roquefort squirty cheese
-      the big cheese.</string>
+    <string name="pokemon_ipsum">Pokémon is a media franchise managed by The Pokémon Company, a
+        Japanese consortium between Nintendo, Game Freak, and Creatures. The franchise was created
+        by Satoshi Tajiri in 1995, and is centered on fictional creatures called "Pokémon",
+        which humans, known as Pokémon Trainers, catch and train to battle each other for sport.
+    </string>
     <string name="checkin">Checkin</string>
     <string name="menu_settings">Settings</string>
     <string name="raised">Raised</string>
