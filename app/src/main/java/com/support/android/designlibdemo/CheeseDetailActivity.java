@@ -17,13 +17,18 @@
 package com.support.android.designlibdemo;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.graphics.Palette;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
@@ -50,6 +55,48 @@ public class CheeseDetailActivity extends AppCompatActivity {
         collapsingToolbar.setTitle(cheeseName);
 
         loadBackdrop();
+        paletteStuff();
+
+
+    }
+
+    private void paletteStuff(){
+        Palette.PaletteAsyncListener paletteListener = new Palette.PaletteAsyncListener(){
+
+            @Override
+            public void onGenerated(Palette palette) {
+                int defaultColor = 0x000000;
+                int vibrant = palette.getVibrantColor(defaultColor);
+                int vibrantLight = palette.getLightVibrantColor(defaultColor);
+                int vibrantDark = palette.getDarkVibrantColor(defaultColor);
+                int muted = palette.getMutedColor(defaultColor);
+                int mutedLight = palette.getLightMutedColor(defaultColor);
+                int mutedDark = palette.getDarkMutedColor(defaultColor);
+                final TextView textView1 = (TextView) findViewById(R.id.palette1);
+                textView1.setText("Vibrant");
+                textView1.setBackgroundColor(vibrant);
+                final TextView textView2 = (TextView) findViewById(R.id.palette2);
+                textView2.setBackgroundColor(vibrantLight);
+                textView2.setText("Vibrant Light");
+                final TextView textView3 = (TextView) findViewById(R.id.palette3);
+                textView3.setBackgroundColor(vibrantDark);
+                textView3.setText("Vibrant Dark");
+                final TextView textView4 = (TextView) findViewById(R.id.palette4);
+                textView4.setBackgroundColor(muted);
+                textView4.setText("Muted");
+                final TextView textView5 = (TextView) findViewById(R.id.palette5);
+                textView5.setBackgroundColor(mutedLight);
+                textView5.setText("Muted Light");
+                final TextView textView6 = (TextView) findViewById(R.id.palette6);
+                textView6.setBackgroundColor(mutedDark);
+                textView6.setText("Muted Dark");
+            }
+        };
+
+        Bitmap myBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.cheese_3);
+        if (myBitmap != null && !myBitmap.isRecycled()) {
+            Palette.from(myBitmap).generate(paletteListener);
+        }
     }
 
     private void loadBackdrop() {
