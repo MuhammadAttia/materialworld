@@ -1,6 +1,4 @@
-Fork of https://github.com/chrisbanes/cheesesquare
-
-![alt text](https://raw.githubusercontent.com/chrisbanes/cheesesquare/master/art/icon.png)
+Originally forked from https://github.com/chrisbanes/cheesesquare
 
 Cheesesquare Sample
 ===================================
