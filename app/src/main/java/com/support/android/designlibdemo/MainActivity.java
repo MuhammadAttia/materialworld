@@ -12,8 +12,11 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *
+ * This project was forked from https://github.com/chrisbanes/cheesesquare.
+ * Added more samples to show use of other material design concepts
+ * Images taken from http://pokemondb.net/pokedex/all
  */
-
 package com.support.android.designlibdemo;
 
 import android.os.Bundle;
@@ -33,13 +36,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * TODO
- */
+
 public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout mDrawerLayout;

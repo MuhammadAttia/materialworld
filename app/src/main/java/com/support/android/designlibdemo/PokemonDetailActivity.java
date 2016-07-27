@@ -32,7 +32,8 @@ import com.bumptech.glide.Glide;
 
 public class PokemonDetailActivity extends AppCompatActivity {
 
-    public static final String EXTRA_NAME = "cheese_name";
+    public static final String EXTRA_NAME = "pokemon_name";
+    public static final String EXTRA_DRAWABLE = "pokemon_drawable";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -40,7 +41,8 @@ public class PokemonDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
 
         Intent intent = getIntent();
-        final String cheeseName = intent.getStringExtra(EXTRA_NAME);
+        final String pokemonName = intent.getStringExtra(EXTRA_NAME);
+        final int pokemonDrawable = intent.getIntExtra(EXTRA_DRAWABLE, 0);
 
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -48,16 +50,16 @@ public class PokemonDetailActivity extends AppCompatActivity {
 
         CollapsingToolbarLayout collapsingToolbar =
                 (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
-        collapsingToolbar.setTitle(cheeseName);
+        collapsingToolbar.setTitle(pokemonName);
         collapsingToolbar.setExpandedTitleColor(getResources().getColor(R.color.black));
 
-        loadBackdrop();
-        paletteStuff();
+        loadBackdrop(pokemonDrawable);
+        paletteStuff(pokemonDrawable);
 
 
     }
 
-    private void paletteStuff(){
+    private void paletteStuff(int drawable){
         Palette.PaletteAsyncListener paletteListener = new Palette.PaletteAsyncListener(){
 
             @Override
@@ -90,15 +92,15 @@ public class PokemonDetailActivity extends AppCompatActivity {
             }
         };
 
-        Bitmap myBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.charmander);
+        Bitmap myBitmap = BitmapFactory.decodeResource(getResources(), drawable);
         if (myBitmap != null && !myBitmap.isRecycled()) {
             Palette.from(myBitmap).generate(paletteListener);
         }
     }
 
-    private void loadBackdrop() {
+    private void loadBackdrop(int drawable) {
         final ImageView imageView = (ImageView) findViewById(R.id.backdrop);
-        Glide.with(this).load(Pokemon.getRandomCheeseDrawable()).centerCrop().into(imageView);
+        Glide.with(this).load(drawable).centerCrop().into(imageView);
     }
 
     @Override
