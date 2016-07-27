@@ -23,19 +23,20 @@
     android:paddingRight="16dp"
     android:paddingTop="8dp"
     android:paddingBottom="8dp"
-    android:gravity="center_vertical">
+    android:orientation="vertical"
+    android:gravity="center">
 
     <ImageView
         android:id="@+id/avatar"
         android:layout_width="@dimen/list_item_avatar_size"
         android:layout_height="@dimen/list_item_avatar_size"
-        tools:src="@drawable/bulbasaur"
-        android:layout_marginRight="16dp"/>
+        tools:src="@drawable/bulbasaur"/>
 
     <TextView
         android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         tools:textColor="@color/black"
         tools:text="Bulbasaur"
         tools:textAppearance="?attr/textAppearanceListItem"/>

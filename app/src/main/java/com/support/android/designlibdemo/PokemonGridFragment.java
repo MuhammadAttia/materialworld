@@ -19,7 +19,7 @@ package com.support.android.designlibdemo;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,7 +27,9 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PokemonListFragment extends Fragment {
+public class PokemonGridFragment extends Fragment {
+
+    private static final int GRID_SPAN = 3;
 
     @Nullable
     @Override
@@ -39,8 +41,8 @@ public class PokemonListFragment extends Fragment {
     }
 
     private void setupRecyclerView(RecyclerView recyclerView) {
-        recyclerView.setLayoutManager(new LinearLayoutManager(recyclerView.getContext()));
-        recyclerView.setAdapter(new ListRecyclerViewAdapter(getActivity(), addFakeData()));
+        recyclerView.setLayoutManager(new GridLayoutManager(recyclerView.getContext(), GRID_SPAN));
+        recyclerView.setAdapter(new GridRecyclerViewAdapter(getActivity(), addFakeData()));
     }
 
 

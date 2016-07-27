@@ -103,9 +103,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         Adapter adapter = new Adapter(getSupportFragmentManager());
-        adapter.addFragment(new PokemonListFragment(), "Grid View");
+        adapter.addFragment(new PokemonGridFragment(), "Grid View");
         adapter.addFragment(new PokemonListFragment(), "List View");
-        adapter.addFragment(new PokemonListFragment(), "Staggered Grid View");
+        adapter.addFragment(new PokemonStaggeredGridFragment(), "Staggered Grid View");
         viewPager.setAdapter(adapter);
     }
 

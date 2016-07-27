@@ -3,7 +3,6 @@ package com.support.android.designlibdemo;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,7 +12,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import java.util.List;
 
-public class SimpleStringRecyclerViewAdapter extends RecyclerView.Adapter<SimpleStringRecyclerViewAdapter.ViewHolder> {
+public class GridRecyclerViewAdapter extends RecyclerView.Adapter<GridRecyclerViewAdapter.ViewHolder> {
 
     private final TypedValue mTypedValue = new TypedValue();
     private int mBackground;
@@ -44,7 +43,7 @@ public class SimpleStringRecyclerViewAdapter extends RecyclerView.Adapter<Simple
         return mValues.get(position).getName();
     }
 
-    public SimpleStringRecyclerViewAdapter(Context context, List<Pokemon> items) {
+    public GridRecyclerViewAdapter(Context context, List<Pokemon> items) {
         context.getTheme().resolveAttribute(R.attr.selectableItemBackground, mTypedValue, true);
         mBackground = mTypedValue.resourceId;
         mValues = items;
@@ -53,14 +52,13 @@ public class SimpleStringRecyclerViewAdapter extends RecyclerView.Adapter<Simple
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-            .inflate(R.layout.list_item, parent, false);
+            .inflate(R.layout.grid_item, parent, false);
         view.setBackgroundResource(mBackground);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
-        Log.d("Yash", "position "+position);
         holder.mBoundString = mValues.get(position).getName();
         holder.mBoundInt = mValues.get(position).getDrawable();
         holder.mTextView.setText(mValues.get(position).getName());

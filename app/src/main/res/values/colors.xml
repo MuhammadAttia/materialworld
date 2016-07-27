@@ -22,4 +22,5 @@
     <color name="color_accent">#FFC107</color>
     <color name="color_accent_white">#FFECB3</color>
     <color name="black">#000000</color>
+    <color name="blue">#00aaa1</color>
 </resources>
