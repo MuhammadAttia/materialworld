@@ -45,7 +45,6 @@ public class SimpleStringRecyclerViewAdapter extends RecyclerView.Adapter<Simple
     }
 
     public SimpleStringRecyclerViewAdapter(Context context, List<Pokemon> items) {
-        Log.d("Yash", "items "+items.toString());
         context.getTheme().resolveAttribute(R.attr.selectableItemBackground, mTypedValue, true);
         mBackground = mTypedValue.resourceId;
         mValues = items;
@@ -85,7 +84,6 @@ public class SimpleStringRecyclerViewAdapter extends RecyclerView.Adapter<Simple
 
     @Override
     public int getItemCount() {
-        Log.d("Yash", "values "+mValues.size());
         return mValues.size();
     }
 }

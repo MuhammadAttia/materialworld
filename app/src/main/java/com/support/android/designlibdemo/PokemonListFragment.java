@@ -21,7 +21,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,7 +32,6 @@ public class PokemonListFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        Log.d("Yash", "onCreateView");
         RecyclerView rv = (RecyclerView) inflater.inflate(
                 R.layout.fragment_pokemon_list, container, false);
         setupRecyclerView(rv);
@@ -41,7 +39,6 @@ public class PokemonListFragment extends Fragment {
     }
 
     private void setupRecyclerView(RecyclerView recyclerView) {
-        Log.d("Yash", "setupRecyclerView");
         recyclerView.setLayoutManager(new LinearLayoutManager(recyclerView.getContext()));
         recyclerView.setAdapter(new SimpleStringRecyclerViewAdapter(getActivity(), addFakeData()));
     }
@@ -49,14 +46,21 @@ public class PokemonListFragment extends Fragment {
 
     private List<Pokemon> addFakeData() {
         List<Pokemon> list = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
-            Log.d("Yash", "count: "+i);
-            list.add(i, new Pokemon("Bulbasaur", R.drawable.bulbasaur));
-            list.add(i, new Pokemon("Charmander", R.drawable.charmander));
-            list.add(i, new Pokemon("Diglett", R.drawable.diglett));
+        int count = 6;
+        for (int i = 0; i < 30; i++) {
+            if (i % count == 0) {
+                list.add(i, new Pokemon("Bulbasaur", R.drawable.bulbasaur));
+            } else if (i % count == 1) {
+                list.add(i, new Pokemon("Charmander", R.drawable.charmander));
+            } else if (i % count == 2) {
+                list.add(i, new Pokemon("Diglett", R.drawable.diglett));
+            } else if (i % count == 3) {
             list.add(i, new Pokemon("Pidgey", R.drawable.pidgey));
-            list.add(i, new Pokemon("Squirtle", R.drawable.squirtle));
-            Log.d("Yash", "list: "+list.toString());
+            } else if (i % count == 4) {
+                list.add(i, new Pokemon("Squirtle", R.drawable.squirtle));
+            } else if (i % count == 5) {
+            list.add(i, new Pokemon("Weedle", R.drawable.weedle));
+            }
         }
         return list;
     }
