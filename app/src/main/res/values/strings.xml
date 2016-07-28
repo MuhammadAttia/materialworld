@@ -26,11 +26,11 @@
     <string name="menu_settings">Settings</string>
     <string name="raised">Raised</string>
     <string name="flat">Flat</string>
-    <string name="bulbasaur_text">Bulbasaur (Japanese: フシギダネ Fushigidane) is a dual-type Grass/Poison Pokémon. It evolves into Ivysaur starting at level 16, which evolves into Venusaur starting at level 32.</string>
-    <string name="charmander_text">Charmander (Japanese: ヒトカゲ Hitokage) is a Fire-type Pokémon. It evolves into Charmeleon starting at level 16, which evolves into Charizard starting at level 36.</string>
-    <string name="diglett_text">Diglett (Japanese: ディグダ Digda) is a Ground-type Pokémon. It evolves into Dugtrio starting at level 26.</string>
-    <string name="pidgey_text">Pidgey (Japanese: ポッポ Poppo) is a dual-type Normal/Flying Pokémon. It evolves into Pidgeotto starting at level 18, which evolves into Pidgeot starting at level 36.</string>
-    <string name="squirtle_text">Squirtle (Japanese: ゼニガメ Zenigame) is a Water-type Pokémon. It evolves into Wartortle starting at level 16, which evolves into Blastoise starting at level 36.</string>
+    <string name="bulbasaur_text">Bulbasaur (Japanese: フシギダネ Fushigidane) is a dual-type Grass/Poison Pokémon. It evolves into Ivysaur starting at level 16, which evolves into Venusaur starting at level 32</string>
+    <string name="charmander_text">Charmander (Japanese: ヒトカゲ Hitokage) is a Fire-type Pokémon. It evolves into Charmeleon starting at level 16, which evolves into Charizard starting at level 36</string>
+    <string name="diglett_text">Diglett (Japanese: ディグダ Digda) is a Ground-type Pokémon. It evolves into Dugtrio starting at level 26</string>
+    <string name="pidgey_text">Pidgey (Japanese: ポッポ Poppo) is a dual-type Normal/Flying Pokémon. It evolves into Pidgeotto starting at level 18, which evolves into Pidgeot starting at level 36</string>
+    <string name="squirtle_text">Squirtle (Japanese: ゼニガメ Zenigame) is a Water-type Pokémon. It evolves into Wartortle starting at level 16, which evolves into Blastoise starting at level 36</string>
     <string name="weedle_text">Weedle (Japanese: ビードル Beedle) is a dual-type Bug/Poison Pokémon. It evolves into Kakuna starting at level 7, which evolves into Beedrill starting at level 10</string>
 
 </resources>

@@ -29,7 +29,7 @@ import java.util.List;
 
 public class PokemonStaggeredGridFragment extends Fragment {
 
-    private static final int STAGGERED_GRID_SPAN = 3;
+    private static final int STAGGERED_GRID_SPAN = 2;
 
     @Nullable
     @Override
