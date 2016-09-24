@@ -77,9 +77,10 @@ public class ListRecyclerViewAdapter extends RecyclerView.Adapter<ListRecyclerVi
         });
 
         Glide.with(holder.mImageView.getContext())
-            .load(holder.mBoundInt)
-            .fitCenter()
-            .into(holder.mImageView);
+                .load(holder.mBoundInt)
+                .override(100, 80)
+                .centerCrop()
+                .into(holder.mImageView);
     }
 
     @Override
