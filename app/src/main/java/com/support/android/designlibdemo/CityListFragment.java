@@ -27,13 +27,13 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PokemonListFragment extends Fragment {
+public class CityListFragment extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         RecyclerView rv = (RecyclerView) inflater.inflate(
-                R.layout.fragment_pokemon_list, container, false);
+                R.layout.fragment_city_list, container, false);
         setupRecyclerView(rv);
         return rv;
     }
@@ -44,22 +44,22 @@ public class PokemonListFragment extends Fragment {
     }
 
 
-    private List<Pokemon> addFakeData() {
-        List<Pokemon> list = new ArrayList<>();
+    private List<City> addFakeData() {
+        List<City> list = new ArrayList<>();
         int count = 6;
         for (int i = 0; i < 30; i++) {
             if (i % count == 0) {
-                list.add(i, new Pokemon("Bulbasaur", R.drawable.bulbasaur));
+                list.add(i, new City("Chicago", R.drawable.chicago));
             } else if (i % count == 1) {
-                list.add(i, new Pokemon("Charmander", R.drawable.charmander));
+                list.add(i, new City("Las Vegas", R.drawable.lasvegas));
             } else if (i % count == 2) {
-                list.add(i, new Pokemon("Diglett", R.drawable.diglett));
+                list.add(i, new City("New Orleans", R.drawable.neworleans));
             } else if (i % count == 3) {
-                list.add(i, new Pokemon("Pidgey", R.drawable.pidgey));
+                list.add(i, new City("New York", R.drawable.newyork));
             } else if (i % count == 4) {
-                list.add(i, new Pokemon("Squirtle", R.drawable.squirtle));
+                list.add(i, new City("Philadelphia", R.drawable.philadelphia));
             } else if (i % count == 5) {
-                list.add(i, new Pokemon("Weedle", R.drawable.weedle));
+                list.add(i, new City("San Francisco", R.drawable.sanfrancisco));
             }
         }
         return list;

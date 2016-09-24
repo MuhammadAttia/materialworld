@@ -19,49 +19,49 @@ package com.support.android.designlibdemo;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PokemonStaggeredGridFragment extends Fragment {
+public class CityGridFragment extends Fragment {
 
-    private static final int STAGGERED_GRID_SPAN = 2;
+    private static final int GRID_SPAN = 3;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         RecyclerView rv = (RecyclerView) inflater.inflate(
-                R.layout.fragment_pokemon_list, container, false);
+                R.layout.fragment_city_list, container, false);
         setupRecyclerView(rv);
         return rv;
     }
 
     private void setupRecyclerView(RecyclerView recyclerView) {
-        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(STAGGERED_GRID_SPAN, StaggeredGridLayoutManager.VERTICAL));
-        recyclerView.setAdapter(new StaggeredRecyclerAdapter(addFakeData()));
+        recyclerView.setLayoutManager(new GridLayoutManager(recyclerView.getContext(), GRID_SPAN));
+        recyclerView.setAdapter(new GridRecyclerViewAdapter(getActivity(), addFakeData()));
     }
 
 
-    private List<String> addFakeData() {
-        List<String> list = new ArrayList<>();
+    private List<City> addFakeData() {
+        List<City> list = new ArrayList<>();
         int count = 6;
         for (int i = 0; i < 30; i++) {
             if (i % count == 0) {
-                list.add(i, getResources().getString(R.string.bulbasaur_text));
+                list.add(i, new City("Chicago", R.drawable.chicago));
             } else if (i % count == 1) {
-                list.add(i, getResources().getString(R.string.charmander_text));
+                list.add(i, new City("Las Vegas", R.drawable.lasvegas));
             } else if (i % count == 2) {
-                list.add(i, getResources().getString(R.string.diglett_text));
+                list.add(i, new City("New Orleans", R.drawable.neworleans));
             } else if (i % count == 3) {
-                list.add(i, getResources().getString(R.string.pidgey_text));
+                list.add(i, new City("New York", R.drawable.newyork));
             } else if (i % count == 4) {
-                list.add(i, getResources().getString(R.string.squirtle_text));
+                list.add(i, new City("Philadelphia", R.drawable.philadelphia));
             } else if (i % count == 5) {
-                list.add(i, getResources().getString(R.string.weedle_text));
+                list.add(i, new City("San Francisco", R.drawable.sanfrancisco));
             }
         }
         return list;

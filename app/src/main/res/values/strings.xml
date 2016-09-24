@@ -17,20 +17,19 @@
 
 <resources>
     <string name="app_name">Material World</string>
-    <string name="pokemon_ipsum">Pokémon is a media franchise managed by The Pokémon Company, a
-        Japanese consortium between Nintendo, Game Freak, and Creatures. The franchise was created
-        by Satoshi Tajiri in 1995, and is centered on fictional creatures called "Pokémon",
-        which humans, known as Pokémon Trainers, catch and train to battle each other for sport.
+    <string name="city_ipsum">A city is a large and permanent human settlement.Although there is no
+        agreement on how a city is distinguished from a town in general English language meanings,
+        many cities have a particular administrative, legal, or historical status based on local law.
     </string>
     <string name="checkin">Checkin</string>
     <string name="menu_settings">Settings</string>
     <string name="raised">Raised</string>
     <string name="flat">Flat</string>
-    <string name="bulbasaur_text">Bulbasaur (Japanese: フシギダネ Fushigidane) is a dual-type Grass/Poison Pokémon. It evolves into Ivysaur starting at level 16, which evolves into Venusaur starting at level 32</string>
-    <string name="charmander_text">Charmander (Japanese: ヒトカゲ Hitokage) is a Fire-type Pokémon. It evolves into Charmeleon starting at level 16, which evolves into Charizard starting at level 36</string>
-    <string name="diglett_text">Diglett (Japanese: ディグダ Digda) is a Ground-type Pokémon. It evolves into Dugtrio starting at level 26</string>
-    <string name="pidgey_text">Pidgey (Japanese: ポッポ Poppo) is a dual-type Normal/Flying Pokémon. It evolves into Pidgeotto starting at level 18, which evolves into Pidgeot starting at level 36</string>
-    <string name="squirtle_text">Squirtle (Japanese: ゼニガメ Zenigame) is a Water-type Pokémon. It evolves into Wartortle starting at level 16, which evolves into Blastoise starting at level 36</string>
-    <string name="weedle_text">Weedle (Japanese: ビードル Beedle) is a dual-type Bug/Poison Pokémon. It evolves into Kakuna starting at level 7, which evolves into Beedrill starting at level 10</string>
+    <string name="chicago_text">Chicago is the third-most populous city in the United States. With over 2.7 million residents, it is the most populous city in the state of Illinois and the Midwestern United States, and the county seat of Cook County. The Chicago metropolitan area, often referred to as Chicagoland, has nearly 10 million people and is the third-largest in the U.S.</string>
+    <string name="lasvegas_text">lasvegas (Japanese: ヒトカゲ Hitokage) is a Fire-type Pokémon. It evolves into Charmeleon starting at level 16, which evolves into Charizard starting at level 36</string>
+    <string name="neworleans_text">neworleans (Japanese: ディグダ Digda) is a Ground-type Pokémon. It evolves into Dugtrio starting at level 26</string>
+    <string name="newyork_text">The City of New York, often called New York City or simply New York, is the most populous city in the United States.[9] Located at the southern tip of the state of New York, the city is the center of the New York metropolitan area, one of the most populous urban agglomerations in the world.</string>
+    <string name="philadelphia_text">philadelphia (Japanese: ゼニガメ Zenigame) is a Water-type Pokémon. It evolves into Wartortle starting at level 16, which evolves into Blastoise starting at level 36</string>
+    <string name="sanfrancisco_text">sanfrancisco (Japanese: ビードル Beedle) is a dual-type Bug/Poison Pokémon. It evolves into Kakuna starting at level 7, which evolves into Beedrill starting at level 10</string>
 
 </resources>

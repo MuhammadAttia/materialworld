@@ -15,7 +15,13 @@
  *
  * This project was forked from https://github.com/chrisbanes/cheesesquare.
  * Added more samples to show use of other material design concepts
- * Images taken from http://pokemondb.net/pokedex/all
+ * Image credit
+ * http://traveler.marriott.com/chicago/5-things-to-do-in-chicago-that-are-easy-on-the-wallet/
+ * http://www.forbes.com/sites/larryolmsted/2015/08/04/10-coolest-things-you-didnt-know-you-could-do-in-las-vegas-2015-16/#5d6bf2634602
+ * http://www.destination360.com/north-america/us/louisiana/new-orleans
+ * PHOTOGRAPH BY YOSHIO TOMII / GETTY new york
+ * http://www.prgn.com/philadelphia-skyline/
+ * https://en.wikipedia.org/wiki/File:GoldenGateBridge-001.jpg
  */
 package com.support.android.designlibdemo;
 
@@ -103,9 +109,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         Adapter adapter = new Adapter(getSupportFragmentManager());
-        adapter.addFragment(new PokemonGridFragment(), "Grid");
-        adapter.addFragment(new PokemonListFragment(), "List");
-        adapter.addFragment(new PokemonStaggeredGridFragment(), "Staggered");
+        adapter.addFragment(new CityGridFragment(), "Grid");
+        adapter.addFragment(new CityListFragment(), "List");
+        adapter.addFragment(new CityStaggeredGridFragment(), "Staggered");
         viewPager.setAdapter(adapter);
     }
 

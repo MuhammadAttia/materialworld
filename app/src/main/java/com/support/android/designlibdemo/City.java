@@ -1,11 +1,11 @@
 package com.support.android.designlibdemo;
 
-public class Pokemon {
+public class City {
 
     private String name;
     private int drawable;
 
-    public Pokemon(String name, int drawable) {
+    public City(String name, int drawable) {
         this.name = name;
         this.drawable = drawable;
     }

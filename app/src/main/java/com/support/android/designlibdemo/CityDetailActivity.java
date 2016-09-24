@@ -25,15 +25,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.graphics.Palette;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
-public class PokemonDetailActivity extends AppCompatActivity {
+public class CityDetailActivity extends AppCompatActivity {
 
-    public static final String EXTRA_NAME = "pokemon_name";
-    public static final String EXTRA_DRAWABLE = "pokemon_drawable";
+    public static final String EXTRA_NAME = "city_name";
+    public static final String EXTRA_DRAWABLE = "city_drawable";
+    CollapsingToolbarLayout collapsingToolbar;
+    View view;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -41,22 +44,20 @@ public class PokemonDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
 
         Intent intent = getIntent();
-        final String pokemonName = intent.getStringExtra(EXTRA_NAME);
-        final int pokemonDrawable = intent.getIntExtra(EXTRA_DRAWABLE, 0);
+        final String cityName = intent.getStringExtra(EXTRA_NAME);
+        final int cityDrawable = intent.getIntExtra(EXTRA_DRAWABLE, 0);
 
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        CollapsingToolbarLayout collapsingToolbar =
-                (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
-        collapsingToolbar.setTitle(pokemonName);
-        collapsingToolbar.setExpandedTitleColor(getResources().getColor(R.color.black));
+        collapsingToolbar = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
+        collapsingToolbar.setTitle(cityName);
 
-        loadBackdrop(pokemonDrawable);
-        paletteStuff(pokemonDrawable);
+        view = (View) findViewById(R.id.view);
 
-
+        loadBackdrop(cityDrawable);
+        paletteStuff(cityDrawable);
     }
 
     private void paletteStuff(int drawable){
@@ -89,6 +90,7 @@ public class PokemonDetailActivity extends AppCompatActivity {
                 final TextView textView6 = (TextView) findViewById(R.id.palette6);
                 textView6.setBackgroundColor(mutedDark);
                 textView6.setText("Muted Dark");
+                view.setBackgroundColor(muted);
             }
         };
 

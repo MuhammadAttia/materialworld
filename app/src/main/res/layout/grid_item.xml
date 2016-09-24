@@ -28,9 +28,9 @@
 
     <ImageView
         android:id="@+id/avatar"
-        android:layout_width="@dimen/list_item_avatar_size"
-        android:layout_height="@dimen/list_item_avatar_size"
-        tools:src="@drawable/bulbasaur"/>
+        android:layout_width="@dimen/list_item_avatar_width"
+        android:layout_height="@dimen/list_item_avatar_height"
+        tools:src="@drawable/newyork"/>
 
     <TextView
         android:id="@+id/text"
@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         tools:textColor="@color/black"
-        tools:text="Bulbasaur"
+        tools:text="New York"
         tools:textAppearance="?attr/textAppearanceListItem"/>
 
 </LinearLayout>

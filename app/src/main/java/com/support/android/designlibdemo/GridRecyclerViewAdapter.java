@@ -16,7 +16,7 @@ public class GridRecyclerViewAdapter extends RecyclerView.Adapter<GridRecyclerVi
 
     private final TypedValue mTypedValue = new TypedValue();
     private int mBackground;
-    private List<Pokemon> mValues;
+    private List<City> mValues;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public String mBoundString;
@@ -43,7 +43,7 @@ public class GridRecyclerViewAdapter extends RecyclerView.Adapter<GridRecyclerVi
         return mValues.get(position).getName();
     }
 
-    public GridRecyclerViewAdapter(Context context, List<Pokemon> items) {
+    public GridRecyclerViewAdapter(Context context, List<City> items) {
         context.getTheme().resolveAttribute(R.attr.selectableItemBackground, mTypedValue, true);
         mBackground = mTypedValue.resourceId;
         mValues = items;
@@ -67,9 +67,9 @@ public class GridRecyclerViewAdapter extends RecyclerView.Adapter<GridRecyclerVi
             @Override
             public void onClick(View v) {
                 Context context = v.getContext();
-                Intent intent = new Intent(context, PokemonDetailActivity.class);
-                intent.putExtra(PokemonDetailActivity.EXTRA_NAME, holder.mBoundString);
-                intent.putExtra(PokemonDetailActivity.EXTRA_DRAWABLE, holder.mBoundInt);
+                Intent intent = new Intent(context, CityDetailActivity.class);
+                intent.putExtra(CityDetailActivity.EXTRA_NAME, holder.mBoundString);
+                intent.putExtra(CityDetailActivity.EXTRA_DRAWABLE, holder.mBoundInt);
                 context.startActivity(intent);
             }
         });
