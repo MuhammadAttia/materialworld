@@ -60,7 +60,6 @@ public class ListRecyclerViewAdapter extends RecyclerView.Adapter<ListRecyclerVi
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
-        Log.d("Yash", "position "+position);
         holder.mBoundString = mValues.get(position).getName();
         holder.mBoundInt = mValues.get(position).getDrawable();
         holder.mTextView.setText(mValues.get(position).getName());
